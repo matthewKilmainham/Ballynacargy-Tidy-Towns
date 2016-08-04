@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+	<style>
+	body {
+			background: linear-gradient(to top right, #99ff99, #ffffff);
+			height: 100%;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		font-family: sans-serif;
+		background-color: #f1f1f1;
+		position: fixed;
+		top: 0;
+		left:0;
+		width: 100%;
+		box-shadow: 0px 3px 5px #f1f1f1;
+	}
+
+	li {
+		float: left;
+		border-right: 1px solid #d9d9d9;
+	}
+	li:last-child {
+		border-right: none;
+		padding-right: 1%;
+	}
+	li a{
+		display: block;
+		color: #000;
+		padding: 14px 40px;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	li a:hover{
+		background-color: #555;
+		color: white;
+		box-shadow: 5px 5px 10px #555;
+	}
+
+	#bally {
+		height: 400px;
+		width: 100%;
+		margin: 0;
+		left: 0;
+		position: absolute;
+		border-bottom: 10px solid #ffff80;
+	}
+
+	#pic-and-desc{
+		position:relative;
+	}
+
+	#failte {
+		text-align: center;
+		font-family: sans-serif;
+		color: #000000;
+	}
+
+	#header {
+		height: 400px;
+		box-shadow: 0px 15px 5px #888888;
+	}
+
+	p{
+		text-align: justify;
+		color: #000000;
+		font-family: sans-serif;
+	}
+
+	video {
+		margin:auto;
+		display:block;
+		padding-top: 20px;
+	}
+
+	#text {
+		text-align: center;
+		width: 40%;
+		float: left;
+		padding-left: 15%;
+	}
+
+	iframe {
+		box-shadow: 10px 10px 5px #888888;
+	}
+
+	#web-title {
+		position: relative;
+		padding-top: 23%;
+	}
+
+
+	</style>
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.7";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+	<div id = "main-header">
+		<div id="header">
+			<img id="bally" src="bally.jpg"><br>
+			<img id="web-title" src="title.png">
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="https://www.facebook.com/">About Us</a></li>
+				<li><a href="https://www.facebook.com/">Ballynacargy</a></li>
+				<li><a href="https://www.facebook.com/">Visit</a></li>
+				<li><a href="https://www.facebook.com/">News</a></li>
+				<li style="float:right"><a href="https://www.facebook.com/">Contact</a></li>
+			</ul>
+		</div>
+		<div id="pic-and-des">
+		<table>
+			<tr>
+				<td>
+					<div class="fb-page" data-href="https://www.facebook.com/BallynacargyTT/" data-tabs="timeline" data-width="300" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/BallynacargyTT/" class="fb-xfbml-parse-ignore"></blockquote></div>
+					<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FBallynacargyTT%2F&tabs=timeline&width=300&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="500" style="border: none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+				</td>
+				<td id="text">
+					<h2 id ="failte">Failte na Baile na Carraige!</h2>
+			<p>Ballynacargy, or Ballinacarrigy, (Irish: Baile na Carraige) is a small village in County Westmeath, Ireland on the Royal Canal and the R393 regional road. The last official commercial navigation of the canal took place in 1955.</p>
+			<p>The village primarily owes its existence to the Royal Canal which opened in 1817. The origins of the village go back much further. The first recorded reference to it dates from 1537 after the dissolution of the nearby monastery at Tristernagh Abbey. Attached to the monastery was a leper hospital, a rarity by that time. It is thought that the village initially grew with the decline of Kilbixy, an important town in County Meath 500 years ago.
+
+			The local parish is still called Kilbixy and is home to a mausoleum built by a Lord Sunderlin in 1798.
+
+			Northeast of the village are the ruins of Templecross Church from where the ruins of Tristernagh Abbey are visible. Templecross was converted to a Protestant church in the 17th century. The abbey, also known as the Priory of Kilbixy was founded in 1192 by Geoffrey de Constantine. An Augustinian priory, the abbey achieved some fame from its establishment until 1536 when the commissioners of the English King Henry VIII ransacked and destroyed it.</p>
+				</td>
+				<td>
+				</td>
+			</tr>
+		</table>
+			
+
+			
+		</div>
+	</div>
+</body>
+</html>
