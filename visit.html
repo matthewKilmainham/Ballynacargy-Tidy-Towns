@@ -1,0 +1,233 @@
+<!doctype html>
+<html>
+<head>
+	<style>
+	body {
+			background: linear-gradient(to top right, #99ff99, #ffffff);
+			height: 100%;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		font-family: sans-serif;
+		background-color: #f1f1f1;
+		position: fixed;
+		top: 0;
+		left:0;
+		width: 100%;
+		box-shadow: 0px 3px 5px #f1f1f1;
+	}
+
+	li {
+		float: left;
+		border-right: 1px solid #d9d9d9;
+	}
+	li:last-child {
+		border-right: none;
+		padding-right: 1%;
+	}
+	li a{
+		display: block;
+		color: #000;
+		padding: 14px 40px;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	li a:hover{
+		background-color: #555;
+		color: white;
+		box-shadow: 5px 5px 10px #555;
+	}
+
+	#bally {
+		height: 400px;
+		width: 100%;
+		margin: 0;
+		left: 0;
+		position: absolute;
+		border-bottom: 10px solid #ffff80;
+	}
+
+	#pic-and-desc{
+		position:relative;
+	}
+
+	#failte {
+		text-align: center;
+		font-family: sans-serif;
+		color: #000000;
+	}
+
+	#header {
+		height: 400px;
+		box-shadow: 0px 15px 5px #888888;
+	}
+
+	p{
+		text-align: justify;
+		color: #000000;
+		font-family: sans-serif;
+	}
+
+	video {
+		margin:auto;
+		display:block;
+		padding-top: 20px;
+	}
+
+	#text {
+		text-align: center;
+		width: 40%;
+		float: left;
+		padding-left: 15%;
+	}
+
+	iframe {
+		box-shadow: 10px 10px 5px #888888;
+	}
+
+	#web-title {
+		position: relative;
+		padding-top: 23%;
+	}
+
+	#googleMap {
+		position: relative;
+		top: 20px;
+		box-shadow: 10px 10px 5px #888888;
+	}
+
+	#directions {
+		padding-left: 40px;
+		font-size: 30px;
+	}
+
+	.drop {
+		position: relative;
+		top: 10px;
+		cursor: pointer;
+	}
+
+	.direct {
+		display: none;
+		background-color: #d9d9d9;
+		border: 1px solid #ffff80;
+		box-shadow: 3px 3px 5px #888888;
+		font-size: 20px;
+	}
+
+
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script>
+		function initialize() {
+  			var mapProp = {
+	    		center:new google.maps.LatLng(53.581593, -7.534585),
+	    		zoom:15,
+	    		mapTypeId:google.maps.MapTypeId.ROADMAP
+			};
+  			var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.7";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+	<div id = "main-header">
+		<div id="header">
+			<img id="bally" src="bally.jpg"><br>
+			<img id="web-title" src="title.png">
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="https://www.facebook.com/">About Us</a></li>
+				<li><a href="https://www.facebook.com/">Ballynacargy</a></li>
+				<li><a href="https://www.facebook.com/">Visit</a></li>
+				<li><a href="https://www.facebook.com/">News</a></li>
+				<li style="float:right"><a href="https://www.facebook.com/">Contact</a></li>
+			</ul>
+		</div>
+		<div id="main-body">
+			<table>
+				<tr>
+					<td>
+						<div id="googleMap" style="width:500px;height:380px;"></div>
+					</td>
+					<td id="directions">
+						From Mullingar<img class="drop" id="drop1" src="drop-down.png"><br/>
+						<div class="direct" id="d1">Take this road<br/>Then take this road<br/>You have arrived</div>
+						From Longford<img class="drop" id="drop2" src="drop-down.png"><br/>
+						<div class="direct" id="d2">Directions directions directions directions</div>
+						From Athlone<img class="drop" id="drop3" src="drop-down.png"><br/>
+						<div class="direct" id="d3">Directions directions directions directions</div>
+						From Tullamore<img class="drop" id="drop4" src="drop-down.png"><br/>
+						<div class="direct" id="d4">Directions directions directions directions</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+<script>
+	var is1Visible = false;
+	var is2Visible = false;
+	var is3Visible = false;
+	var is4Visible = false;
+
+	$("#drop1").click(function(){
+		if(!is1Visible){
+			$("#d1").fadeIn();
+			is1Visible = true;
+		}
+		else{
+			$("#d1").fadeOut();
+			is1Visible = false;
+		}
+	});
+
+	$("#drop2").click(function(){
+		if(!is2Visible){
+			$("#d2").fadeIn();
+			is2Visible = true;
+		}
+		else{
+			$("#d2").fadeOut();
+			is2Visible = false;
+		}
+	});
+
+	$("#drop3").click(function(){
+		if(!is3Visible){
+			$("#d3").fadeIn();
+			is3Visible = true;
+		}
+		else{
+			$("#d3").fadeOut();
+			is3Visible = false;
+		}
+	});
+
+	$("#drop4").click(function(){
+		if(!is4Visible){
+			$("#d4").fadeIn();
+			is4Visible = true;
+		}
+		else{
+			$("#d4").fadeOut();
+			is4Visible = false;
+		}
+	});
+</script>
+</html>
